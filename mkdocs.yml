@@ -1,0 +1,173 @@
+site_name: Knowledge-Base
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - navigation.tabs.sticky
+  - navigation.top
+  - search.suggest
+  - search.highlight
+  - search.share
+  - navigation.footer
+  - content.code.copy
+
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - abbr
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: en
+  # - social   # not working on windows due to gtk tools error and other errors which req cairo and dll's. 
+
+
+repo_url: https://github.com/rohanbatrain/Knowledge-Base
+repo_name: rohanbatrain/Knowledge-Base
+
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/katex.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+
+nav:
+  - Home: 
+    - Introduction: "index.md"
+    - Track-Record: "Home/Track-Record.md"
+    #- Documentation: "Home/Documentation.md"
+    #- Archive: "Home/Archive.md"
+  - Developement-Setup:
+      - Introduction: "Developement-Setup/Introduction.md"
+      - Device-Names: "Developement-Setup/Naming.md"
+      - IP-Allocation: "Developement-Setup/IP-Allocation.md"
+      - Owned Devices:
+        - Apple: 
+          - Iphone:
+            - Iphone-6s:
+              - 2023:
+                - August:
+                  - Production: "Developement-Setup/Owned-Devices/Apple/Iphone/6s/2023/August/Production.md"
+                - September-Present:
+                  - Production: "Developement-Setup/Owned-Devices/Apple/Iphone/6s/2023/September/Production.md"
+        - Android:
+          - OnePlus: 
+            - Kebab: 
+                - Production: 
+                  - 2023:
+                    - September-Present: "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Production/2023/September/production.md"
+                    - August-September: "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Production/2023/August/production.md"
+                    - July-August: "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Production/2023/July/production.md"
+        
+                - Testing: 
+                  - Fresh-Device : "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Testing/fresh-device.md"
+                  - Evolution-X : "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Testing/evolution-x.md"
+                  - Kali-Nethunter : "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Testing/kali-nethunter.md"
+                  - Lineage-OS : "Developement-Setup/Owned-Devices/Android/One-Plus/Kebab/Testing/lineage-os.md"
+        - Laptops:
+          - Dell:
+            - 2023:
+              - June:
+                - Latitude-E6420: "Developement-Setup/Owned-Devices/Laptops/Dell/2023/June/Dell-Latitude-E6420.md"
+          - MSI:
+            - 2023:
+              - August-Present: 
+                - GF63-Thin: "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Introduction.md"
+                - Micron: 
+                  - Windows-11: "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Micron-Drive/Windows-11.md" 
+                  - Manjaro (EOL): "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Micron-Drive/Manjaro.md"
+                - Crucial:
+                  - Proxmox: 
+                    - Installation: "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Crucial-Drive/Proxmox.md" 
+                    - Virtualization : 
+                      - Containers: 
+                        - Pihole : "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Crucial-Drive/Promox/Containers/Pihole.md"
+                      - VMs:
+                        - PFSense: "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Crucial-Drive/Promox/Virtual-Machines/PFsense.md"
+                    - Failure-Log: "Developement-Setup/Owned-Devices/Laptops/MSI/2023/August/Crucial-Drive/Failure-Log.md"
+            - 2024:
+              - January:
+                - Micron:
+                    - Garuda-Linux : "Developement-Setup/Owned-Devices/Laptops/MSI/2024/January/Micron-Drive/Garuda-Linux.md"
+      - Team Devices: 
+        #- Android
+        - Desktops:
+          - Vina: 
+            - 2023:
+              - July-September:
+                - Installation: "Developement-Setup/Team-Devices/Desktops/Vina/Production/July/Installation.md"
+                - Post-Installation: "Developement-Setup/Team-Devices/Desktops/Vina/Production/July/Post-Installation.md"
+              - September-Present: 
+                - Installation: "Developement-Setup/Team-Devices/Desktops/Vina/Production/September/Installation.md"
+        - Laptops:
+          - Apple:
+            - MacBook-Air:
+              - M2-13-inch:
+                - 2023:
+                  - September-Present:
+                    - Production: "Developement-Setup/Team-Devices/Laptops/Apple/MacBook-Air/M2-13-inch/2023/September/Production.md"
+      - Guest Devices:
+        - Laptops:
+          - HP-Pavilion-Convertable-360: "Developement-Setup/Guest-Devices/Laptops/HP-Pavilion-360-Convertable.md"
+  - Projects:
+      - Introduction: "Documentation/Introduction.md"
+      - Personal:
+          - Obsidian: 
+            - Second-Brain-Template: "Documentation/Obsidian/Second-Brain-Template.md"
+          - Python: 
+              - Second-Brain-API: "Documentation/Python/Projects/Second-Brain-API.md"
+              - Second-Brain-Tools-2022: "Documentation/Python/Projects/Second-Brain-Tools-2022.md"
+  - Tutorials: 
+      - Windows: 
+          - Powershell-Environment: "Documentation/Python/Tutorials/Windows/Powershell-environment.md"
+  - SOPs:
+    - Introduction: "SOPs/SOPs.md"
+    - Educational:
+      - Note-Taking: "SOPs/Note-Taking.md" 
+      - Courses: "SOPs/Courses.md"
+      - Flashcards: "SOPs/Flashcards.md"
+    - Personal Brand:
+      - Marketing: "SOPs/Marketing.md"
+      - Emails: "SOPs/Emails.md"
+  - Archive:
+    - Introduction: "Archive/Introduction.md"
+    - Hugo: "Archive/Hugo.md"            
+
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@rohanbatra.in
+
+
+copyright: Copyright &copy; 2022 - 2023 Rohan Batra
+
+
