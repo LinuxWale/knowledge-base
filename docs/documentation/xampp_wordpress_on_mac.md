@@ -15,3 +15,29 @@
 12. Go to 127.0.0.1/<wordpress_unzipped_folder_name>, in my case it is 127.0.0.1/wordpress.
 13. Set your Wordpress Account.
 14. TANTANAAAA! All Set!
+
+## FTP SETUP
+
+1. File Permissions
+
+execute these lines first:
+
+```bash
+chmod 777 /Applications/XAMPP/xamppfiles/htdocs/wordpress/
+chmod 777 /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/uploads/
+chmod 777 /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/plugins/
+chmod 777 /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/
+```
+
+2. Wordpress Config:
+
+Add these to wp-config.php:
+
+/** Add here*/
+define('FS_METHOD','direct');
+define("FTP_HOST", "localhost");
+define("FTP_USER", “my_wordpress_user”);
+define("FTP_PASS", “password”);
+/** To here*/
+
+where my_wordpress_user and password are the ones used in wordpress.
