@@ -1,5 +1,6 @@
-These are all the callouts:
+These are all the callouts. Copy and paste them into your obsidian markdown file and play with it.
 
+```markdown
 > [!note] note
 
 > [!abstract] abstract
@@ -53,3 +54,5 @@ These are all the callouts:
 > [!quote] quote
 
 > [!cite] cite
+
+```
